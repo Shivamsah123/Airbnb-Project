@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-dark: #070b14;
+  --bg-card: rgba(16, 24, 39, 0.7);
+  --border-color: rgba(0, 210, 255, 0.2);
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --neon-blue: #00d2ff;
+  --neon-blue-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+  --neon-glow: 0 0 15px rgba(0, 210, 255, 0.4);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(0, 210, 255, 0.05), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(58, 123, 213, 0.05), transparent 25%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6, .page-header {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.page-header {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Overriding Bootstrap Elements */
+.card {
+  background: var(--bg-card) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-main) !important;
+  border-radius: 12px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neon-glow) !important;
+  border-color: rgba(0, 210, 255, 0.5) !important;
+}
+
+.card-title {
+  color: #ffffff;
+}
+
+.text-primary, .text-success, .text-info {
+  color: var(--neon-blue) !important;
+}
+
+.bg-primary, .bg-success, .bg-info {
+  background: var(--neon-blue-gradient) !important;
+  color: white !important;
+  border: none !important;
+}
+
+.navbar {
+  background: rgba(7, 11, 20, 0.8) !important;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  background: var(--neon-blue-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.nav-link {
+  color: var(--text-main) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--neon-blue) !important;
+  text-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
+}
+
+.btn-primary, .btn-success, .btn-info {
+  background: var(--neon-blue-gradient) !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  padding: 10px 24px;
+  transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover, .btn-success:hover, .btn-info:hover {
+  transform: scale(1.05);
+  box-shadow: var(--neon-glow) !important;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%) !important;
+  border: none !important;
+  box-shadow: 0 0 10px rgba(255, 65, 108, 0.3);
+}
+
+.form-control {
+  background-color: rgba(16, 24, 39, 0.8) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+.form-control:focus {
+  background-color: rgba(16, 24, 39, 1) !important;
+  border-color: var(--neon-blue) !important;
+  box-shadow: 0 0 0 0.25rem rgba(0, 210, 255, 0.25) !important;
+  color: white !important;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted) !important;
+}
+
+table.table {
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}
+
+table.table thead th {
+  background-color: rgba(0, 210, 255, 0.1) !important;
+  color: var(--neon-blue) !important;
+  border-bottom: 2px solid var(--neon-blue) !important;
+}
+
+table.table tbody td {
+  background-color: transparent !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+hr {
+  border-color: var(--border-color);
+  opacity: 0.5;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--neon-blue);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a7bd5;
+}
+
